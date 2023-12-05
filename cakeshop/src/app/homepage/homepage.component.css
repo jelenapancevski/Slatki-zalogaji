@@ -1,0 +1,60 @@
+
+
+.col {
+    padding: 0px!important;
+}
+
+.sameheight {
+    display: flex;
+    padding-bottom: 5%!important;
+}
+.info-sameheight {
+    margin-bottom: 10px;
+}
+.info-sameheight mat-card{
+    flex: 1;
+   /*padding: 1em;*/
+   
+}
+#slider{
+    /*height:100%;
+    width:100%;*/
+    color:#FAF6F4;
+    background-color: #CB857C!important;
+    padding: 0;
+}
+
+#slider img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-item{
+    display: flex!important;
+    justify-content: center  !important;
+    /*width: 100%;*/
+   
+    background-repeat: no-repeat;
+    background-position: center center;
+   
+}
+#image {
+    height: 85vh;
+}
+
+#name {
+    text-align: center;
+    line-height: 1.2;
+    padding: 30px ;
+    font-family: "Annie";
+    font-size: 50px;
+}
+
+#description {
+    text-align: center;
+    line-height: 1.2;
+    padding: 30px ;
+    background-color: #CB857C;
+    font-family: "Annie";
+    font-size: 30px;
+}

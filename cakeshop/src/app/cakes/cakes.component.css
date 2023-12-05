@@ -1,0 +1,64 @@
+.container-fluid {
+    background-image: url("../../assets/cakes/cakesbackground.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+
+
+#title{
+    text-align: center;
+    color:#FAF6F4;
+    font-size: 50px;
+    font-family: 'Annie';
+    padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.sameheight {
+    
+    display: flex;
+}
+
+.info-sameheight mat-card{
+    margin-top:10px!important;
+    margin-bottom:10px!important;
+    flex: 1;
+   padding: 1em;
+   object-fit: contain;
+   border: solid;
+   border-color:#F6CBB7;
+}
+
+.mat-card-image {
+object-fit: cover;
+height:40vh;
+}
+
+mat-card {
+    background-color: #F6CBB7;
+}
+mat-card-header{
+    justify-content: center;
+}
+mat-card-title {
+    font-family: 'Annie';
+    font-size: 30px  !important;
+    padding-bottom: 30px;
+    color:#492222!important;
+}
+
+mat-card-actions{
+    font-family: 'Annie';
+    font-size: 20px  !important;
+    line-height: 1.2;
+    text-align: center!important;
+    padding-bottom: 30px;
+    color:black!important
+}

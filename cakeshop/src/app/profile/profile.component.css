@@ -1,0 +1,41 @@
+.container-fluid {
+    background-image: url("../../assets/profile/profilebackground.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+table td {
+    color:#9C2D41;
+    font-family: "Annie"!important;
+    font-size: 30px !important;
+    line-height: 1.3;
+}
+
+button {
+    color:#9C2D41;
+    margin-top: 2%;
+    font-family: "Atma"!important;
+    font-size: 28px !important;
+  }
+
+  input {
+    font-family: 'Annie' !important;
+    font-size: 20px !important;
+  }
+
+  #buttons{
+    margin-bottom: 30px;
+    background-color: #FAF7F4;
+  }
+
+  .creambckg{
+    background-color: #FAF7F4;
+    margin-top: 10%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }

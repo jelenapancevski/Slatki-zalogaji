@@ -1,0 +1,106 @@
+.container-fluid {
+    background-image: url("../../assets/login-page/loginbackground.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+#logo{
+    width: 50px;
+    height: 70px;
+}
+.title {
+    background-color: #9C2D41;
+    font-size: 50px !important;
+    font-family: 'Inspiration';
+    padding-top: 1%;
+    padding-bottom: 1%;
+    line-height: 1.5;
+    color: white;
+    margin-bottom: 1%;
+}
+
+
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-label {
+    font-family: 'Atma';
+    color: #CB857C;
+    font-size: 25px;
+}
+
+input {
+    font-family: 'Annie';
+    color: #CB857C;
+    font-size: 25px;
+}
+
+#login {
+    text-align: center;
+    margin-top: 20vh;
+  }
+
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white !important;
+    border-radius: 5px;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #9C2D41 !important;
+}
+
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+    color: #9C2D41 !important;
+    /* opacity: 1!important;*/
+}
+
+
+::ng-deep .mat-input-element {
+    caret-color: #9C2D41 !important;
+}
+
+
+::ng-deep .mat-form-field-invalid .mat-input-element,
+.mat-warn .mat-input-element {
+    caret-color: #9C2D41 !important;
+}
+
+
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #9C2D41 !important;
+}
+
+
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    color: #9C2D41 !important;
+}
+
+
+.mat-flat-button {
+    font-family: 'Atma';
+    font-size:  24px;
+    background-color:#CB857C!important;;
+  }
+  
+
+
+  
+#message {
+    background-color: white;
+    display: inline;
+    font-family: "Annie"!important;
+    font-size: 28px !important;
+    color:rgb(71, 3, 3);
+   
+  }
+  

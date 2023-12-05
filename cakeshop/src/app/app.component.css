@@ -1,0 +1,32 @@
+.navbar-brand {
+    font-family: 'Inspiration';
+    font-size: 60px;
+    color:#FAF6F4!important;
+}
+#logo{
+    width: 50px;
+    height: 70px;
+}
+
+
+.nav-link {
+    font-family: 'Annie';
+    font-size:  30px;
+    color:#FAF6F4!important;;
+    vertical-align: middle!important;
+    display: flex;
+        align-items:center;
+        justify-content:center;
+
+}
+
+.navbar {
+    background-color: #9C2D41!important;
+}
+
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

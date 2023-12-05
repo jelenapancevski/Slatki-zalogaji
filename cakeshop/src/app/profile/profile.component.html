@@ -1,0 +1,68 @@
+
+<div class="container-fluid" align="center">
+
+    <div class="row"  *ngIf="!editData">
+        <div class="offset-lg-4 col-lg-4 creambckg">
+            <div class="row">
+                <div class="col-lg-12">
+                    <table id="buttons">
+                        <tr>
+                            <td>
+                                <button  mat-button (click)="updatepassword()"> Promeni lozinku </button>
+                            </td>
+                            <td>
+                                <button  mat-button (click)="updatedata()"> Izmeni podatke </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+         </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <table>
+                    
+                    <tr>
+                        
+                        <td > Ime: {{user.firstname}}
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Prezime: {{user.lastname}}
+                        </td>
+                    </tr>
+                    <tr>
+                      
+                        <td> Korisničko ime: {{user.username}}
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        
+                        <td>Adresa: {{user.address.street}}&nbsp;{{user.address.number}},&nbsp;{{user.address.city}}
+                        </td>
+                    </tr>
+        
+        
+                    <tr>
+                        
+                        <td>Kontakt telefon: {{user.phone}}
+                    </tr>
+                    <tr>
+                        
+                        <td>Email: {{user.email}}</td>
+                    </tr>
+                   
+                </table>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <app-updatedata *ngIf="show==1" [user]="user">
+
+    </app-updatedata>
+    <app-password *ngIf="show==2" [user]="user">
+
+    </app-password>
+</div>

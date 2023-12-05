@@ -1,0 +1,103 @@
+
+<form class="form-horizontal updatedata" [formGroup]="EditPersonalData" align="center" style="display: flex; justify-content:center">
+
+    <div class="container-fluid" align="center" >
+
+        <div class="row"  align="right">
+            <div class="offset-lg-4   col-lg-4 col-sm-4 ">
+                <button (click)="profile()" mat-button> Odustani </button>
+            </div>
+        </div>
+       
+        <div class="row">
+            <div class="offset-lg-4 col-lg-2 col-sm-4  " >
+                <mat-form-field appearance="outline" layout="column">
+                    <mat-label>Ime</mat-label>
+                    <input type="text" matInput placeholder="Firstname" formControlName="firstname" [(ngModel)]="user.firstname" >
+                </mat-form-field>
+            </div>
+            <div class="col-lg-2 col-sm-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>Prezime</mat-label>
+                    <input type="text" matInput placeholder="Lastname" formControlName="lastname" [(ngModel)]="user.lastname">
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class=" offset-lg-4 col-lg-2 col-sm-4 ">
+                <mat-form-field appearance="outline">
+                    <mat-label>Korisničko ime</mat-label>
+                    <input type="text" matInput placeholder="Username" formControlName="username" [(ngModel)]="user.username">
+                    <mat-error *ngIf="EditPersonalData.get('username').errors?.['username']">
+                        {{EditPersonalData.get('username').errors['username'].value}}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-lg-2 col-sm-4 ">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput placeholder="Email" formControlName="email" [(ngModel)]="user.email">
+                    <mat-error *ngIf="EditPersonalData.get('email').errors?.['email']">
+                        {{EditPersonalData.get('email').errors?.['email'].value}}
+
+                    </mat-error>
+
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-lg-4  col-lg-2 col-sm-4 ">
+                <mat-form-field appearance="outline">
+                    <mat-label>Ulica</mat-label>
+                    <input type="text" matInput  formControlName="street" [(ngModel)]="user.address.street">
+                    <mat-error *ngIf="EditPersonalData.get('street').errors?.['street']">
+                        {{EditPersonalData.get('street').errors['street'].value}}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="  col-lg-2 col-sm-4 ">
+                <mat-form-field appearance="outline">
+                    <mat-label>Broj ulice</mat-label>
+                    <input type="text" matInput formControlName="number" [(ngModel)]="user.address.number">
+                    <mat-error *ngIf="EditPersonalData.get('number').errors?.['number']">
+                        {{EditPersonalData.get('number').errors['number'].value}}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+       
+        <div class="row">
+            <div class=" offset-lg-4 col-lg-2 col-sm-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>Grad</mat-label>
+                    <input type="text" matInput formControlName="city" [(ngModel)]="user.address.city">
+                    <mat-error *ngIf="EditPersonalData.get('city').errors?.['city']">
+                        {{EditPersonalData.get('city').errors['city'].value}}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-lg-2 col-sm-4 ">
+                <mat-form-field appearance="outline">
+                    <mat-label>Kontakt telefon</mat-label>
+                    <input type="tel" matInput placeholder="e.g. 061123456" formControlName="phone" [(ngModel)]="user.phone">
+                    <mat-error *ngIf="EditPersonalData.get('phone').errors">
+                        Invalid phone format
+                    </mat-error>
+
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" offset-lg-4 col-lg-4 col-sm-6 " >
+                <button  mat-flat-button color="primary" type="submit"
+                    (click)="EditPersonalData.valid? saveChanges():null">
+                    Sačuvaj izmene </button>
+            </div>
+        </div>
+
+    </div>
+
+</form>

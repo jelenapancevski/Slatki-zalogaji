@@ -1,0 +1,36 @@
+#title{
+    text-align:center ;
+    font-size: 45px !important;
+    font-family: 'Inspiration';
+    padding-top: 1%;
+    padding-bottom: 1%;
+    line-height: 1.5;
+    color: #492222;
+    margin-bottom: 1%;
+}
+
+.container-fluid {
+    font-family: 'Annie';
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+#map {
+    margin-top: 50px;
+}
+
+#frame {
+    width: 100%;
+}
+
+.header {
+    font-family: 'Atma';
+    text-align: center;
+    color: #492222;
+    margin-bottom: 1%;
+}
+
+mat-icon{
+    color:#9C2D41
+}
