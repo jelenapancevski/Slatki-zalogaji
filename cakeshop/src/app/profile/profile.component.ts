@@ -12,8 +12,8 @@ export class ProfileComponent implements OnInit {
   show:number;
   user:User;
   constructor(private router: Router) { }
-
   ngOnInit(): void {
+    
     this.show=0;
     this.editData=false;
     this.user=JSON.parse(sessionStorage.getItem("user"));
@@ -21,7 +21,8 @@ export class ProfileComponent implements OnInit {
       this.router.navigate(['/']);
       return;
     }     
-
+    
+   
   }
 
 

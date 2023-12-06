@@ -8,7 +8,6 @@
     height: 70px;
 }
 
-
 .nav-link {
     font-family: 'Annie';
     font-size:  30px;
@@ -20,11 +19,31 @@
 
 }
 
+a:hover {
+    color: #2d9c88!important;;
+}
+
+.selected{
+    color: #2d9c88!important;
+}
+.not-selected{
+    color: #faf6f4,!important;;
+}
 .navbar {
     background-color: #9C2D41!important;
 }
-
-
+.dropdown-menu{
+    background-color: #9C2D41;
+    border-color: #9C2D41;
+}
+.dropdown-item {
+    font-family: 'Annie';
+    font-size:  30px;;
+    padding: 20px;
+    color:#FAF6F4!important;;
+    background-color: #9C2D41;
+    
+}
 #menu {
     display: flex;
     justify-content: space-between;

@@ -15,7 +15,6 @@ import { ContactComponent } from './contact/contact.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { PromotionsComponent } from './promotions/promotions.component';
 import { BasketComponent } from './basket/basket.component';
-import { ProductsComponent } from './products/products.component';
 import { CakesComponent } from './cakes/cakes.component';
 import { DessertsComponent } from './desserts/desserts.component';
 import { ProductComponent } from './product/product.component';
@@ -68,7 +67,6 @@ import {MatMenuModule} from '@angular/material/menu';
     NotificationsComponent,
     PromotionsComponent,
     BasketComponent,
-    ProductsComponent,
     CakesComponent,
     DessertsComponent,
     ProductComponent,

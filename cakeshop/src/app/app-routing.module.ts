@@ -14,7 +14,6 @@ import { OrderComponent } from './order/order.component';
 import { OrdersComponent } from './orders/orders.component';
 import { PasswordComponent } from './password/password.component';
 import { ProductComponent } from './product/product.component';
-import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
 {path:'addproduct',component:AddproductComponent},
@@ -27,7 +26,6 @@ const routes: Routes = [
 {path:'notifications',component:NotificationsComponent},
 {path:'orders',component:OrdersComponent},
 {path:'product',component:ProductComponent},
-{path:'products',component:ProductsComponent},
 {path:'profile',component:ProfileComponent},
 {path:'promotions',component:PromotionsComponent},
 {path: '**', redirectTo: ''}

@@ -7,6 +7,7 @@ import { User } from './models/user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  selectedOption:string;
   title = 'cakeshop';
   user:User;
   ngOnInit(): void {
@@ -18,6 +19,10 @@ export class AppComponent {
   logout(){
     sessionStorage.removeItem("user");
       document.location.replace('/login');
+  }
+  selectOption(option: string) {
+    console.log('Selected Option:', option);
+    this.selectedOption=option;
   }
 }
 

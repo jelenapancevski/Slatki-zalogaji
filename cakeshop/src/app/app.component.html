@@ -8,7 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav" id="menu">
             <li class="nav-item dropdown db">
-                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" [class.selected]="selectedOption==='products'" (click)="selectOption('products')">
                   Proizvodi
                 </a>
                 <ul class="dropdown-menu">
@@ -18,25 +18,25 @@
             </li>
        
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/promotions']"> Promocije</a>
+            <a class="nav-link" [routerLink]="['/promotions']" [class.selected]="selectedOption==='promotions'"(click)="selectOption('promotions')"> Promocije</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/contact']">Kontakt</a>
+            <a class="nav-link" [routerLink]="['/contact']" [class.selected]="selectedOption==='contact'" (click)="selectOption('contact')">Kontakt</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/basket']" >Korpa</a>
+            <a class="nav-link" [routerLink]="['/basket']" [class.selected]="selectedOption==='basket'" (click)="selectOption('basket')" >Korpa</a>
             
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/notifications']" >Obaveštenja</a>
+            <a class="nav-link" [routerLink]="['/notifications']" [class.selected]="selectedOption==='notifications'" (click)="selectOption('notifications')">Obaveštenja</a>
             
           </li>
           
           <li class="nav-item" >
-            <a class="nav-link" [routerLink]="['/profile']">Profil</a>
+            <a class="nav-link" [routerLink]="['/profile']" [class.selected]="selectedOption==='profile'" (click)="selectOption('profile')">Profil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="logout()">Odjavi se</a>
+            <a class="nav-link"  [routerLink]="[]" (click)="logout()">Odjavi se</a>
           </li>  
           
         </ul>
@@ -55,16 +55,16 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav" id="menu">
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/orders']" >Proudžbine</a>
+            <a class="nav-link" [routerLink]="['/orders']" [class.selected]="selectedOption==='orders'" (click)="selectOption('orders')">Proudžbine</a>
             
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/addproduct']" >Novi Proizvod</a>
+            <a class="nav-link" [routerLink]="['/addproduct']" [class.selected]="selectedOption==='addproduct'" (click)="selectOption('addproduct')" >Novi Proizvod</a>
             
           </li>
           
           <li class="nav-item" >
-            <a class="nav-link" [routerLink]="['/profile']">Profil</a>
+            <a class="nav-link" [routerLink]="['/profile']"[class.selected]="selectedOption==='profile'" (click)="selectOption('profile')">Profil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" (click)="logout()">Odjavi se</a>
