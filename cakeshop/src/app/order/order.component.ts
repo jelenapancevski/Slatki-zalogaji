@@ -64,6 +64,7 @@ export class OrderComponent implements OnInit {
 
     let index = this.order.products.indexOf(product);
     this.order.products.splice(index, 1);
+    this.calctotalprice();
     sessionStorage.setItem("order", JSON.stringify(this.order));
 
   }
