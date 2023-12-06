@@ -1,1 +1,16 @@
-<p>notifications works!</p>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col" *ngIf="notifications==null || notifications.length==0" id="empty">
+            Nemate novih obaveštenja!
+        </div>
+    </div>
+    <div *ngIf="notifications && notifications.length>0">
+        <div class="row" *ngFor="let notification of notifications" >
+            <div class="col" >
+                <app-order [order]="notification" [user]="user"></app-order>
+            </div>
+        </div>
+    </div>
+   
+    </div>

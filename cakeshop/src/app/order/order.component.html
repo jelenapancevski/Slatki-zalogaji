@@ -1,1 +1,111 @@
-<p>order works!</p>
+
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-lg-12" *ngIf="order.status=='pending'">
+            <h2> Porudžbina {{showdate(order.date)}}</h2>
+        </div>
+        <div class="col-lg-12" *ngIf="order.status=='denied'">
+            <h2> Vaša porudžbina kreirana {{showdate(order.date)}} je odbijena.</h2>
+        </div>
+        <div class="col-lg-12" *ngIf="order.status=='accepted'">
+            <h2> Vaša porudžbina kreirana {{showdate(order.date)}} je odobrena!</h2>
+        </div>
+    </div>
+   <div class="row">
+    <div class="col">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2> Detalji porudžbine</h2>
+            </div>
+            <div class="col productheader">
+                Proizvod
+            </div>
+            <div class="col productheader">
+                Količina
+            </div>
+            <div class="col productheader">
+                Cena
+            </div>
+            <div class="col productheader" *ngIf="loggeduser._id==order.buyer && order.status=='pending'">
+               
+            </div>
+        </div>
+        <div class="row" *ngFor="let product of order.products ">
+            <div class="col producttext" >
+                <img  class="image" src="../../assets/products/{{map.get(product.productid)._id}}.{{map.get(product.productid).image}}">
+                <p class="" style="display: inline;"> {{map.get(product.productid).name}}</p>
+               
+            </div>
+        
+            <div class="col producttext" >
+        
+               {{product.amount}}
+        
+            </div>
+        
+            <div class="col producttext" >
+        
+                <p class="producttext">{{map.get(product.productid).price*product.amount}} din
+                </p>
+        
+            </div>
+        
+            <div class="col producttext" *ngIf="loggeduser._id==order.buyer && order.status=='pending'">
+        
+               <button mat-button (click)="delete(product)"> <mat-icon>delete</mat-icon></button> 
+        
+            </div>
+        
+        </div>
+        <hr>
+    <div class="row">
+    <div class="col" id="orderprice">
+       Ukupna cena: {{(order.totalprice)}} din
+
+    </div>
+    
+
+</div>
+    </div>
+    <div class="col-lg-6 col-12" id="userinfo">
+        <div class="row">
+            <div class="col">
+               
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 userdata">
+              <h2>Podaci o dostavi</h2> 
+            </div>
+            <div class="col-lg-12 userdata">
+                Kupac: {{user.firstname}} {{user.lastname}}
+             </div> 
+             <div class="col-lg-12 userdata">
+                Adresa: {{user.address.street}} {{user.address.number}}, {{user.address.city}}
+             </div>
+             <div class="col-lg-12 userdata">
+                Kontakt telefon: {{user.phone}}
+            </div>
+            
+        </div>
+       
+
+    </div>
+    
+   </div>
+
+   <div class="row">
+    <div class="col" align="right" *ngIf="loggeduser._id==order.buyer && order.status=='pending'">
+        <button mat-flat-button (click)="send()">Potvrdi porudžbinu</button>
+    </div>
+    <div class="col" align="right"  *ngIf="loggeduser.type== 'staff'">
+        <button mat-flat-button (click)="accept()">Prihvati porudžbinu</button> &nbsp;
+        <button mat-flat-button (click)="deny()">Odbij porudžbinu</button>
+    </div>
+    
+   </div>
+
+
+
+
+</div>

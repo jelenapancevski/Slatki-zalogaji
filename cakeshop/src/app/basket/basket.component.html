@@ -1,1 +1,14 @@
-<p>basket works!</p>
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col" *ngIf="order==null || order.products.length==0" id="empty">
+        Vaša korpa je prazna!
+    </div>
+</div>
+
+<div class="row">
+    <div class="col" *ngIf="order && order.products.length>0">
+        <app-order [order]="order" [user]="user"></app-order>
+    </div>
+</div>
+</div>

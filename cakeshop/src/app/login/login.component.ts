@@ -25,7 +25,17 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.message = null;
     this.user=JSON.parse(sessionStorage.getItem("user"));
-
+    if(this.user){
+      switch(this.user.type){
+        case "visitor":
+          document.location.replace('/');
+          break;
+        case "staff":
+          document.location.replace('/orders');
+          break;
+      }
+      
+    }
     this.loginForm = new FormGroup({
       username: new FormControl(null, [Validators.required]),
       password: new FormControl(null, [Validators.required]),
@@ -43,7 +53,8 @@ export class LoginComponent implements OnInit {
           break;
         case "staff":
           sessionStorage.setItem("user", JSON.stringify(user));
-          this.router.navigate(['/orders']);
+          
+          document.location.replace('/orders');
           break;
         default:
           this.message= 'Uneti podaci nisu korektni!';

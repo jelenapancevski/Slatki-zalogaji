@@ -1,3 +1,4 @@
+import { Comment } from "./comment";
 
 
 export class Product {
@@ -11,7 +12,7 @@ export class Product {
 
     image:String;
     
-    price:Number;
+    price:number;
     
     type: String;       // torta/kolac
    

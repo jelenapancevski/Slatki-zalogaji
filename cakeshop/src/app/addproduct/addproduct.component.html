@@ -1,1 +1,99 @@
-<p>addproduct works!</p>
+<div class="container-fluid">
+    <div class="row" id="data">
+        <div class="col-lg-3 col-6 ">
+            <div id="list">
+                <p>Sastojci:</p>
+                <ul>
+                    <li *ngFor="let ingridient of product.ingridients">
+                      {{ingridient}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 col-12">
+            <form class="form-horizontal" ngNativeValidate #form id="form">
+        
+                <div class="row">
+                    <div class="col" align="center">
+        
+                        <input type="file" name="photo" id="photo" accept=".jpg,.jpeg,.png" style='display: none;'
+                            (change)="onFileSelected($event)" #fileInput>
+                        <button mat-fab (click)="fileInput.click()" color="primary" id="photobutton">
+                            <mat-icon>insert_photo</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-6">
+                        <mat-form-field appearance="outline" layout="column">
+                            <mat-label>Naziv</mat-label>
+                            <input type="text" matInput type="text" name="name" [(ngModel)]="product.name" required>
+                        </mat-form-field>
+                    </div>
+                   
+                </div>
+        
+                <div class="row">
+                   
+                        <div class="col-lg-8 col-6">
+                            <mat-form-field appearance="outline" layout="column">
+                                <mat-label>Opis</mat-label>
+                                <textarea type="text" matInput name="description" [(ngModel)]="product.description" required rows="5" ></textarea>
+                            </mat-form-field> 
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-3">
+                        <mat-form-field appearance="outline" layout="column">
+                            <mat-label>Cena</mat-label>
+                            <input type="number" matInput name="price" [(ngModel)]="product.price" min="1" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-4 col-3">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Tip proizvoda</mat-label>
+                            <mat-select name="type" id="type" size="1" [(ngModel)]="product.type" required>
+                                <mat-option value="torta">Torta</mat-option>
+                                <mat-option value="kolač">Kolač</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+        
+        
+            
+                <form ngNativeValidate #ingridientform id="ingridientform">
+        
+                    <div class="row">
+        
+        
+                        <div class="col-lg-4 col-3" 
+                            >
+                            <mat-form-field appearance="outline" layout="column">
+                                <mat-label>Sastojak</mat-label>
+                                <input matInput type="text" id="newingridient" required
+                                    [(ngModel)]="newingridient" name="newingridient">
+                            </mat-form-field>
+                                
+                        </div>
+                        <div class="col-lg-4 col-3" id="addingridient" align="center">
+                            <button type="submit"  (click)="ingridientform.checkValidity()? addingridient():null" mat-flat-button
+                            color="primary" >Dodaj sastojak</button>
+                        </div>
+        
+                    </div>
+                </form>
+                
+                
+                <div class="row">
+                    <div class="col" align="center">
+                        <button type="submit" type="submit" (click)="form.checkValidity()? addproduct() : null" mat-flat-button
+                            color="primary" id="addbtn">Dodaj proizvod</button>
+                    </div>
+                </div>
+        
+            </form>
+        </div>
+    </div>
+   
+</div>

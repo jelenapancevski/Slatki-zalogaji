@@ -1,0 +1,21 @@
+.container-fluid {
+    background-image: url("../../assets/backgrounds/ordersbackground.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+
+#empty{
+    margin-top: 5%;
+    font-family: 'Annie';
+    text-align: center;
+    font-size: 30px;
+    background-color: #FAF7F4;
+    padding-top: 2.5%;
+    padding-bottom:2.5% ;
+}

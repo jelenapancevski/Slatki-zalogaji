@@ -25,11 +25,12 @@ import { AddproductComponent } from './addproduct/addproduct.component';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule } from '@angular/material/icon'
-import { MatInputModule } from '@angular/material/input'
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
-import {MatCardModule} from '@angular/material/card'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCardModule} from '@angular/material/card';
 /* 
 
 ;
@@ -39,7 +40,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 ;
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatSelectModule} from '@angular/material/select';
+
 
 ;
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -90,6 +91,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatButtonModule,
     NgbModule,
     MatCardModule,
+    MatSelectModule,
     /*BrowserAnimationsModule,
     ,
     ,
@@ -99,7 +101,7 @@ import {MatMenuModule} from '@angular/material/menu';
     ,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule,
+   
     NgxMatTimepickerModule,
     NgxMatDatetimePickerModule,
     NgxMatNativeDateModule,

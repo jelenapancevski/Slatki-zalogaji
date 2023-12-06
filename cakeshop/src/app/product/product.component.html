@@ -1,1 +1,130 @@
-<p>product works!</p>
+<div class="container-fluid cream" *ngIf="product">
+
+    <div class="row">
+        <div class="col" id="title">
+            {{product.name}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-lg-4 col-md-6 col-sm-6 picture">
+
+            <mat-card id="picture">
+                <mat-card-header>
+                        &nbsp;
+                </mat-card-header>
+
+                <mat-card-content>
+                    <img mat-card-image src="../../assets/products/{{product._id}}.{{product.image}}">
+                </mat-card-content>
+                <mat-card-actions>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+        <div class="col-lg-8 col-md-6 col-sm-6">
+            <div class="row">
+                <div class="col" >
+                    <div id="description">
+                        {{product.description}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6 ">
+                    <div id="list">
+                        <p>Sastojci:</p>
+                        <ul>
+                            <li *ngFor="let ingridient of product.ingridients">
+                                {{ingridient}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="row">
+                        <div class="col" id="price">
+                            Cena &nbsp;{{product.price}} din
+                        </div>
+                    </div>
+
+                    <form class="form-horizontal" ngNativeValidate #orderform id="orderform">
+                        <div class="row "  >
+                            <div class="col">
+                                <mat-form-field appearance="outline" >
+                                    <mat-label>Količina</mat-label>
+                                    <input matInput name="amount" id="amount" type="number" min="1" step="1" [(ngModel)]="amount" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
+                                </mat-form-field>
+                            </div>
+                            <div class="col">
+                                <button mat-button id="orderbutton" (click)="amount!=null && amount>0? add(amount):null">Dodaj u korpu</button>
+                            </div>
+                        </div>
+                        <div class="row" *ngIf="message">
+                            <div class="col" id="message">
+                                {{message}}
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-comment">
+        <div class="col-lg-6 offset-lg-3 " id="comment-title">
+            Komentari
+        </div>
+        <div class="col-lg-6 offset-lg-3" *ngIf="product.comments.length==0" id="commentmsg">
+            Trenutno ne postoji ni jedan komentar.
+        </div>
+        <div class="col-lg-6 offset-lg-3" *ngFor="let comment of product.comments">
+            <mat-card class="comment" *ngIf="comment.user">
+                <mat-card-header style="min-width: 100%!important">
+
+                    <mat-card-title class="comment-card">{{comment.user.username}}</mat-card-title>
+                    <mat-card-subtitle align="left">{{comment.day}}/{{comment.month}}/{{comment.year}} &nbsp;
+                        {{comment.hours}}:{{comment.minutes}}h
+
+                    </mat-card-subtitle>
+
+
+
+
+                </mat-card-header>
+
+                <mat-card-content [innerHTML]="comment.comment" id="{{comment.id}}" readonly>
+                </mat-card-content> <!-- *ngIf="!user || (comment.username!=user._id)"-->
+
+
+
+            </mat-card>
+        </div>
+        <div class="col-lg-6 offset-lg-3">
+
+            <form class="form-horizontal" ngNativeValidate #form id="form" *ngIf="user && user.type=='visitor'">
+                <div class="row">
+
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-4 comment-center">
+                        <mat-form-field appearance="outline" style="width: 100% !important;">
+                            <mat-label>Ostavi komentar</mat-label>
+                            <input matInput name="newcomment" id="newcomment" [(ngModel)]="newcomment">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+                        <button mat-button (click)="((newcomment)&&(newcomment!='')) ? comment() : null"
+                            class="comment-button button-center-comment ">Postavi</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+    </div>
+</div>

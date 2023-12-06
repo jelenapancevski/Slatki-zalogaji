@@ -5,7 +5,7 @@ const productRouter = express.Router();
 const multer = require("multer");
 const storage = multer.diskStorage({
     destination: (req: express.Request, file: any, cb: any) => {
-        cb(null, './../../zoo/frontend/zoo/src/assets/products/');
+        cb(null, './../cakeshop/src/assets/products/');
         
     },
     filename: (req: express.Request, file: any, cb: any) => {

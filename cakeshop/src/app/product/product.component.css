@@ -1,0 +1,212 @@
+
+.picture mat-card{
+    margin-top:10px!important;
+    margin-bottom:10px!important;
+    flex: 1;
+   padding: 1em;
+   object-fit: contain;
+   border: solid;
+   border-color:#FAF7F4;
+   vertical-align: middle;
+}
+#picture mat-card-header {
+    height: 50px;
+}
+
+#picture mat-card-actions {
+    height: 50px;
+}
+
+.mat-card-image {
+   
+    object-fit: cover;
+    height:80vh;
+    }
+
+#list p {
+    padding: 20px;
+    padding-left: 30px;
+    font-family: "Atma";
+    font-size: 30px;
+    color:#492222;
+    text-align: center;
+}
+
+#list {
+    margin-top: 5% ;
+    padding: 5px;
+    background-color: #F6CBB7;
+    align-content: center;
+}
+
+#list ul{
+    font-family: 'Annie';
+    font-size: 26px;
+    line-height: 1.5;
+    color:#492222;
+}
+
+
+#title {
+    font-family: 'Atma';
+    font-size: 50px;
+    color: #492222;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#message {
+    font-family: 'Annie';
+    font-size: 26px;
+    line-height: 1.5;
+}
+
+#description {
+    font-family: 'Annie';
+    font-size: 26px;
+    line-height: 1.5;
+    color:#FAF7F4;
+    background-color: #CB857C;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+}
+#price {
+    margin-top: 15% ;
+    margin-bottom: 5%;
+    font-family: 'Atma';
+    font-size: 30px;
+    color: #492222;
+    text-align: center;
+}
+#orderform {
+    margin-top: 5%;
+}
+
+#orderbutton {
+    font-family: 'Atma';
+    font-size: 20px;
+    color:white;
+    background-color: #CB857C;
+    margin-top: 10px;
+}
+
+#comment-title {
+     font-family: "Atma"!important;
+    font-size: 30px !important;
+    font-weight: bold;
+    color:#492222;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*color:#0ca994;*/
+}
+
+
+
+.button-center-comment  {
+    margin: 0!important;
+    position: relative!important;
+    top: 50%!important;
+    left: 50%!important;
+    -ms-transform: translate(-50%, -50%)!important;
+    transform: translate(-50%, -50%)!important;
+    vertical-align: middle;
+    
+}
+
+.comment mat-card-title {
+    font-family: 'Atma';
+    font-size: 22px  !important;
+    color:#9C2D41!important;
+}
+.comment mat-card-header {
+    display: flex;
+}
+.comment mat-card-subtitle {
+    font-family: 'Atma';
+    font-size: 20px  !important;
+    color:#CB857C;
+}
+
+.comment mat-card-content {
+    font-size: 22px;
+    font-family: 'Annie' !important;
+    line-height: 1.2;
+    color:#492222!important;
+}
+
+
+
+.center {
+    vertical-align: middle !important;
+    display: inline !important;
+    
+}
+
+
+
+.row-comment {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+
+.comment {
+    margin:1%;
+}
+.comment mat-card-content {
+    margin: 0;
+}
+
+mat-label{
+    font-family: "Annie"!important;
+    font-size: 22px !important;
+    color:#CB857C;
+}
+#newcomment{
+    font-size: 22px;
+    font-family: 'Annie' !important;
+    line-height: 1.2;
+}
+
+.comment-button {
+    font-family: 'Atma';
+    font-size: 20px;
+    color:white;
+    background-color: #2D9C88;
+    padding-left: 20px;
+    margin-left: 20px!important;
+    
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white !important;
+    border-radius: 5px;
+  }
+
+
+
+  #commentmsg {
+    margin-top: 20px!important;
+   margin-bottom:20px!important;
+    font-size: 26px;
+    font-family: 'Annie' !important;
+    color:#492222;
+  }
+
+
+
+
+
+
+  .cream {
+    background-color:#FAF7F4;
+  }
+
+
+.comment-center .mat-form-field{
+    padding-top: 1.34375em;
+}
+
