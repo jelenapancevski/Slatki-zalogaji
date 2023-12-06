@@ -7,7 +7,7 @@
     </div>
 
     <div class="row sameheight" >
-        <div class=" col-lg-4 cold-md-4 col-sm-6 info-sameheight" *ngFor="let dessert of desserts" >
+        <div class=" col-lg-4 cold-md-4 col-sm-6 info-sameheight" *ngFor="let dessert of currentdesserts" >
 
             <mat-card >
                 <mat-card-header>
@@ -26,9 +26,19 @@
     </div>
 
     <div class="row">
-        <div class="col">
-            <button>Prethodna stranica</button>
-            <button>Sledeca stranica</button>
+        <div class="offset-lg-4 col">
+            <nav aria-label="..." >
+                <ul class="pagination ">
+                  <li class="page-item">
+                    <a class="page-link " (click)="previouspage()" [ngClass]="{'disabled':currentpage==1}" style="cursor:default">Prethodna stranica</a>
+                  </li>
+                  <li class="page-item " *ngFor="let page of pages" ><a class="page-link numberspag" [ngClass]="{'active':currentpage==page}"  (click)="setcurrentpage(page)" style="cursor:default">{{page}}</a></li>
+                 
+                  <li class="page-item">
+                    <a class="page-link" (click)="nextpage()" [ngClass]="{'disabled':currentpage==totalpages}" style="cursor:default">Sledeća stranica</a>
+                  </li>
+                </ul>
+              </nav>
         </div>
     </div>
 </div>

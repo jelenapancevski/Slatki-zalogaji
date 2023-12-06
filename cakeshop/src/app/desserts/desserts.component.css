@@ -62,3 +62,30 @@ mat-card-actions{
     padding-bottom: 30px;
     color:black!important
 }
+
+
+.pagination {
+    text-align: center!important
+}
+.page-link {
+    font-family: 'Atma';
+    font-size: 25px  !important;
+    line-height: 1.2;
+    background-color: #FAF6F4;
+    color:#CB857C;
+    padding: 10px;
+    border-color: #CB857C;
+}
+.disabled {
+    color:#F6CBB7;
+}
+.active {
+    color: #492222!important;
+}
+.numberspag{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.page-link:hover{
+    background-color:#F6CBB7;
+}

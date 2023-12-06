@@ -39,15 +39,20 @@
    
 }
 #image {
-    height: 85vh;
+    text-align: center;
+    
+    height:70vh;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
 }
 
 #name {
     text-align: center;
     line-height: 1.2;
-    padding: 30px ;
+    padding: 20px ;
     font-family: "Annie";
-    font-size: 50px;
+    font-size: 45px;
 }
 
 #description {
