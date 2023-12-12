@@ -7,7 +7,7 @@ import { UserService } from '../services/user.service';
 function emailFormat(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
     const letter = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/.test(control.value);
-    return letter ?  null:{'email': {value: "Invalid email format"}} ;
+    return letter ?  null:{'email': {value: "Nekorektan email format"}} ;
   };
 }
 @Component({
@@ -23,7 +23,7 @@ export class UpdatedataComponent implements OnInit {
     return (control: AbstractControl): ValidationErrors | null => {
       if(control.value==null) return null;
      let user =  this.users.find(user=> user.email == control.value);
-      return ((user && user._id!=_id)) ? {'email': {value: "Email is taken"}}: null;
+      return ((user && user._id!=_id)) ? {'email': {value: "Email adresa je zauzeta"}}: null;
     };
   }
   usernameTaken(_id): ValidatorFn {
@@ -31,7 +31,7 @@ export class UpdatedataComponent implements OnInit {
       if(control.value==null) return null;
      let user =  this.users.find(user=> user.username == control.value);
 
-      return ((user && user._id!=_id)) ? {'username': {value: "Username is taken"}}: null;
+      return ((user && user._id!=_id)) ? {'username': {value: "Korisničko ime je zauzeto"}}: null;
     };
   }
   ngOnInit(): void {

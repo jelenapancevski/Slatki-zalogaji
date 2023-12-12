@@ -87,3 +87,13 @@ input {
     font-family: "Atma"!important;
     font-size: 28px !important;
   }
+
+
+  .mat-error {
+    height: fit-content;
+    background-color: white;
+    margin-top: auto;
+    font-family: "Annie"!important;
+    font-size: 25px !important;
+    color:rgb(71, 3, 3);
+    }

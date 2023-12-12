@@ -1,0 +1,6 @@
+ng add @ng-bootstrap/ng-bootstrap
+ng add @angular/material
+npm install --save multer
+npm install @popperjs/core
+npm install jquery
+npm i @popperjs/core
