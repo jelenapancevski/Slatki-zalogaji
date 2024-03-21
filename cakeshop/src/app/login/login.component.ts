@@ -41,6 +41,11 @@ export class LoginComponent implements OnInit {
       password: new FormControl(null, [Validators.required]),
     });
   }
+  setMessageIfFormInvalid() {
+    if (this.loginForm.invalid) {
+      this.message = "Neophodno je uneti korisničko ime i lozinku";
+    }
+  }
 
   login(){
     this.userService.login(this.loginForm.get('username').value,this.loginForm.get('password').value).subscribe((resp:Object)=>{
@@ -57,7 +62,7 @@ export class LoginComponent implements OnInit {
           document.location.replace('/orders');
           break;
         default:
-          this.message= 'Uneti podaci nisu korektni!';
+          this.message= 'Uneti kredencijali nisu validni';
           break;
              
       }

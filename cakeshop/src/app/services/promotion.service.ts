@@ -14,18 +14,5 @@ export class PromotionService {
   get() {
     return this.http.get(`${this.uri}/promotion/get`);
   }
-  // adds new promotion 
-  add(promotion) {
-
-    return this.http.post(`${this.uri}/promotion/add`, { "promotion": promotion });
-  }
-
-  // returns all promotions that are valid
-  valid() {
-    return this.http.get(`${this.uri}/promotion/valid`);
-  }
-
-  cancel(_id) {
-    return this.http.post(`${this.uri}/promotion/cancel`, { "_id": _id });
-  }
+  
 }

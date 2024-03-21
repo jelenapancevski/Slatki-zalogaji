@@ -2,7 +2,7 @@ import * as express from 'express';
 import { ObjectId } from 'mongodb';
 import Product from '../models/product';
 export class ProductController {
-    // returns all products in zoo
+    // returns all products in the cakeshop da li se poziva?
     get = (req: express.Request, res: express.Response) => {
         Product.find({}, (err, products) => {
             if (err) console.log(err);
@@ -44,11 +44,5 @@ export class ProductController {
         })
     }
 
-   /* // edits existing comment
-    editcomment = (req: express.Request, res: express.Response) => {
-        Product.collection.updateOne({ "_id": new ObjectId(req.body.id),'comments':{ $elemMatch: {"username": new ObjectId(req.body.comment.username),"date":req.body.comment.date}}, }, { $set: {"comments.$.comment" : req.body.newcomment, "comments.$.edited":true} }, (err, product) => {
-            if (err) console.log(err);
-            else return res.json("Updated comment");
-        })
-    }*/
+
 }

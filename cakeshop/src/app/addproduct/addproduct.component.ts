@@ -41,8 +41,11 @@ export class AddproductComponent implements OnInit {
   this.newingridient = null;  
   }
   addproduct(){
-    if(this.product.description==null ) return;
-    if(this.product.description=="") return;
+    if((this.product.description==null) || (this.product.description=="")){
+      this.message = "Potrebno je uneti opis proizvoda."
+      return
+    }
+   
    this.product.comments = [];
    
     let extension = this.image.type;
@@ -56,7 +59,7 @@ export class AddproductComponent implements OnInit {
        let  filename = id + "." + this.product.image;
        this.productService.upload(this.image, filename).subscribe();
 
-    this.message = "New product added";
+    this.message = "Novi proizvod je uspešno dodat!";
     document.location.reload();
 
   });

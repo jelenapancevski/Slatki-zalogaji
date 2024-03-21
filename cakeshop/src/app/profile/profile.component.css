@@ -20,7 +20,7 @@ button {
     color:#9C2D41;
     margin-top: 2%;
     font-family: "Atma"!important;
-    font-size: 28px !important;
+    font-size: 26px !important;
   }
 
   input {
@@ -35,7 +35,7 @@ button {
 
   .creambckg{
     background-color: #FAF7F4;
-    margin-top: 10%;
+    margin-top: 20vh;
     padding-bottom: 20px;
     padding-top: 20px;
   }

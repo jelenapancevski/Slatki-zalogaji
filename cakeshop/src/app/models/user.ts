@@ -17,8 +17,6 @@ export class User {
     
     email:String;
     
-    image: String;
-    
     type: String;        // visitor, staff, admin
     
     //status:String;  //pending active blocked

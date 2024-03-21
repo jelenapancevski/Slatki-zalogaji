@@ -16,24 +16,6 @@ class PromotionController {
                     return res.json(promotions);
             });
         };
-        // returns all promotions that are valid
-        this.valid = (req, res) => {
-            promotion_1.default.find({ valid: true }, (err, promotions) => {
-                if (err)
-                    console.log(err);
-                else
-                    return res.json(promotions);
-            });
-        };
-        // adds new rule 
-        this.add = (req, res) => {
-            promotion_1.default.collection.insertOne(req.body.promotion, (err, promotion) => {
-                if (err)
-                    console.log(err);
-                else
-                    return res.json("Promo code succesfully added");
-            });
-        };
     }
 }
 exports.PromotionController = PromotionController;

@@ -7,6 +7,11 @@ const mongodb_1 = require("mongodb");
 const mongoose_1 = __importDefault(require("mongoose"));
 const Schema = mongoose_1.default.Schema;
 let Product = new Schema({
+    ingridents: [
+        {
+            type: String
+        }
+    ],
     name: {
         type: String
     },
@@ -19,11 +24,6 @@ let Product = new Schema({
     image: {
         type: String
     },
-    ingridents: [
-        {
-            type: String
-        }
-    ],
     price: {
         type: Number
     },

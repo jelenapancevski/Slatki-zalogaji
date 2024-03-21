@@ -8,7 +8,7 @@ const mongodb_1 = require("mongodb");
 const product_1 = __importDefault(require("../models/product"));
 class ProductController {
     constructor() {
-        // returns all products in zoo
+        // returns all products in the cakeshop da li se poziva?
         this.get = (req, res) => {
             product_1.default.find({}, (err, products) => {
                 if (err)
@@ -56,13 +56,6 @@ class ProductController {
                     return res.json(product.insertedId);
             });
         };
-        /* // edits existing comment
-         editcomment = (req: express.Request, res: express.Response) => {
-             Product.collection.updateOne({ "_id": new ObjectId(req.body.id),'comments':{ $elemMatch: {"username": new ObjectId(req.body.comment.username),"date":req.body.comment.date}}, }, { $set: {"comments.$.comment" : req.body.newcomment, "comments.$.edited":true} }, (err, product) => {
-                 if (err) console.log(err);
-                 else return res.json("Updated comment");
-             })
-         }*/
     }
 }
 exports.ProductController = ProductController;

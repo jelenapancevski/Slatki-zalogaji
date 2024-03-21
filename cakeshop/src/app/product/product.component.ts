@@ -28,15 +28,24 @@ export class ProductComponent implements OnInit {
     else if (first.date == second.date) return 0;
     else return 1;
   }
+  setDate(comment) {
+    let date = new Date(comment.date);
+    if(date.getDate()<10) comment.day = "0"+date.getDate();
+    else comment.day = date.getDate();
+    if((date.getMonth() + 1)<10) comment.month = "0"+(date.getMonth() + 1);
+    else comment.month = date.getMonth() + 1;
+    comment.year = date.getFullYear();
+    if(date.getHours()<10) comment.hours = "0"+ date.getHours();
+    else comment.hours = date.getHours();
+    if(date.getMinutes()<10) comment.minutes = "0"+date.getMinutes();
+    else comment.minutes = date.getMinutes();
+  
+}
   setDates() {
     let id = 0;
     this.product.comments.forEach(comment => {
       let date = new Date(comment.date);
-      comment.day = date.getDate();
-      comment.month = date.getMonth() + 1;
-      comment.year = date.getFullYear();
-      comment.hours = date.getHours();
-      comment.minutes = date.getMinutes();
+     this.setDate(comment)
       comment.id = id++;
     });
   }

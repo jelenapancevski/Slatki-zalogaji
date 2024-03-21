@@ -26,9 +26,10 @@
 
 .header {
     font-family: 'Atma';
-    text-align: center;
     color: #492222;
     margin-bottom: 1%;
+    display: flex;
+    justify-content: center;
 }
 
 mat-icon{

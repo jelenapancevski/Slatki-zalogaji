@@ -4,13 +4,13 @@
     <div class="container-fluid" align="center" >
 
         <div class="row"  align="right">
-            <div class="offset-lg-4   col-lg-4 col-sm-4 ">
+            <div class="offset-lg-4 col-lg-4 offset-sm-3 col-sm-6 ">
                 <button (click)="profile()" mat-button> Odustani </button>
             </div>
         </div>
        
         <div class="row">
-            <div class="offset-lg-4 col-lg-2 col-sm-4  " >
+            <div class="offset-lg-4 col-lg-2 offset-sm-2 col-sm-4  " >
                 <mat-form-field appearance="outline" layout="column">
                     <mat-label>Ime</mat-label>
                     <input type="text" matInput placeholder="Firstname" formControlName="firstname" [(ngModel)]="user.firstname" >
@@ -26,7 +26,7 @@
 
 
         <div class="row">
-            <div class=" offset-lg-4 col-lg-2 col-sm-4 ">
+            <div class=" offset-lg-4 col-lg-2 offset-sm-2 col-sm-4 ">
                 <mat-form-field appearance="outline">
                     <mat-label>Korisničko ime</mat-label>
                     <input type="text" matInput placeholder="Username" formControlName="username" [(ngModel)]="user.username">
@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="offset-lg-4  col-lg-2 col-sm-4 ">
+            <div class="offset-lg-4  col-lg-2 offset-sm-2 col-sm-4 ">
                 <mat-form-field appearance="outline">
                     <mat-label>Ulica</mat-label>
                     <input type="text" matInput  formControlName="street" [(ngModel)]="user.address.street">
@@ -69,7 +69,7 @@
         </div>
        
         <div class="row">
-            <div class=" offset-lg-4 col-lg-2 col-sm-4">
+            <div class=" offset-lg-4 col-lg-2 offset-sm-2 col-sm-4">
                 <mat-form-field appearance="outline">
                     <mat-label>Grad</mat-label>
                     <input type="text" matInput formControlName="city" [(ngModel)]="user.address.city">
@@ -90,7 +90,7 @@
         </div>
 
         <div class="row">
-            <div class=" offset-lg-4 col-lg-4 col-sm-6 " >
+            <div class=" offset-lg-4 col-lg-4 offset-sm-3 col-sm-6 " >
                 <button  mat-flat-button color="primary" type="submit"
                     (click)="EditPersonalData.valid? saveChanges():null">
                     Sačuvaj izmene </button>

@@ -22,12 +22,7 @@ function number(): ValidatorFn {
     return number ?  null:{'password': {value: " Lozinka mora sadržati bar jedan broj"}} ;
   };
 }
-function letter(): ValidatorFn {
-  return (control: AbstractControl): ValidationErrors | null => {
-    const letter = /^[a-zA-Z]+/.test(control.value);
-    return letter ?  null:{'password': {value: " Lozinka mora početi slovom"}} ;
-  };
-}
+
  
 @Component({
   selector: 'app-password',

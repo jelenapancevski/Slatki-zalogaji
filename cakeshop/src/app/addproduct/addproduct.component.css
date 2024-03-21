@@ -146,12 +146,7 @@ input {
     color: #9C2D41 !important;
 }
 
-
-
-
-
-  
-/*#message {
+#message {
     background-color: white;
     display: inline;
     font-family: "Annie"!important;
@@ -159,20 +154,8 @@ input {
     color:rgb(71, 3, 3);
    
   }
-  button {
-    color:#FAF7F4;
-    margin-top: 2%;
-    margin-bottom: 20px;
-    font-family: "Atma"!important;
-    font-size: 28px !important;
-  }
-  
-  .form-inline {
-    display: flex !important;
-    flex-flow: row wrap!important;
-    align-items: center!important;
-  }
-  */
+
+
   
 
   

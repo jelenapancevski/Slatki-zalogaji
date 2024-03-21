@@ -35,9 +35,6 @@ let User = new Schema({
     email: {
         type: String
     },
-    image: {
-        type: String
-    },
     type: {
         type: String // visitor, staff, admin
     },

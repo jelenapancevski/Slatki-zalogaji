@@ -4,6 +4,11 @@ import mongoose from "mongoose"
 
 const Schema = mongoose.Schema;
 let Product = new Schema({
+    ingridents: [
+        {
+            type: String
+        }
+    ],
     name: {
         type: String
     },
@@ -20,11 +25,6 @@ let Product = new Schema({
         type: String
     }
     ,
-    ingridents: [
-        {
-            type: String
-        }
-    ],
     price: {
         type: Number
     },

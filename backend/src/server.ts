@@ -35,6 +35,34 @@ router.use('/user',userRouter);
 
 app.use('/',router);
 
+app.get('/api/promotions/:name', (req, res) => {
+    const name = req.params.name;
+    const imagePath = path.join(__dirname, '/../../cakeshop/src/assets/promotions/', name);
+    //console.log(imagePath)
+    const fs = require('fs');
+    // Check if the file exists
+    if (fs.existsSync(imagePath)) {
+        // Serve the file
+        res.sendFile(imagePath);
+    } else {
+        res.status(404).send('Image not found');
+    }
+});
+app.get('/api/products/:name', (req, res) => {
+    const name = req.params.name;
+    const imagePath = path.join(__dirname, '/../../cakeshop/src/assets/products/', name);
+    //console.log(imagePath)
+    const fs = require('fs');
+    // Check if the file exists
+    if (fs.existsSync(imagePath)) {
+        // Serve the file
+        res.sendFile(imagePath);
+    } else {
+        res.status(404).send('Image not found');
+    }
+});
+
+
 app.listen(4000, () => console.log(`Express server running on port 4000`));
 
 

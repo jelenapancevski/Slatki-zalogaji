@@ -32,8 +32,18 @@
         </div>
         <div class="row" *ngFor="let product of order.products ">
             <div class="col producttext" >
-                <img  class="image" src="../../assets/products/{{map.get(product.productid)._id}}.{{map.get(product.productid).image}}">
-                <p class="" style="display: inline;"> {{map.get(product.productid).name}}</p>
+                <table class="table">
+                    <tr>
+                        <td>
+                            <img  class="image" src="../../assets/products/{{map.get(product.productid)._id}}.{{map.get(product.productid).image}}">
+                        </td>
+                        <td>
+                            {{map.get(product.productid).name}}
+                        </td>
+                    </tr>
+                </table>
+                
+               
                
             </div>
         
@@ -45,7 +55,7 @@
         
             <div class="col producttext" >
         
-                <p class="producttext">{{map.get(product.productid).price*product.amount}} din
+                <p class="producttext">{{map.get(product.productid).price}} din
                 </p>
         
             </div>

@@ -27,15 +27,7 @@ class UserController {
                     console.log(err);
                 else {
                     if (user == null) {
-                        user_1.default.findOne({ "username": username }, (err, user) => {
-                            if (err)
-                                console.log(err);
-                            else if (user == null) {
-                                return res.json("Incorrect username");
-                            }
-                            else
-                                return res.json("Incorrect password");
-                        });
+                        return res.json("Incorrect credentials");
                     }
                     else
                         res.json(user);
@@ -55,18 +47,6 @@ class UserController {
         // register / add new user
         this.register = (req, res) => {
             let request = new user_1.default(req.body.user);
-            /*
-            username:req.body.username,
-               password:req.body.password,
-               firstname:req.body.firstname,
-               lastname:req.body.lastname,
-               address: req.body.address,
-               phone: req.body.phone,
-               email: req.body.email,
-               image: req.body.image,
-               type:req.body.type,
-               status: "active"
-            */
             request.save().then(user => {
                 res.status(200).json(request._id);
             }).catch(err => {
@@ -85,6 +65,7 @@ class UserController {
         };
         // edit personal info
         this.edit = (req, res) => {
+            console.log(req.body.user._id);
             user_1.default.collection.updateOne({ "_id": new mongodb_1.ObjectId(req.body.user._id) }, { $set: {
                     'username': req.body.user.username,
                     'password': req.body.user.password,
@@ -92,14 +73,14 @@ class UserController {
                     'lastname': req.body.user.lastname,
                     'address': req.body.user.address,
                     'phone': req.body.user.phone,
-                    'email': req.body.user.email,
-                    'image': req.body.user.image
-                } }, (err, user) => {
+                    'email': req.body.user.email
+                } }, (err, result) => {
                 if (err) {
                     console.log(err);
                 }
-                else
+                else {
                     return res.json("Personal data updated successfuly");
+                }
             });
         };
         // get user

@@ -36,7 +36,7 @@ export class DessertsComponent implements OnInit {
     let last = first+this.itemsperpage;
     this.currentdesserts = [];
     for (let i = first; i < last; i++) {
-      if (i > this.desserts.length) break;
+      if (i >=this.desserts.length) break;
       this.currentdesserts.push(this.desserts[i]);
     }
   }
