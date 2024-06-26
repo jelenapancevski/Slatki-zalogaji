@@ -9,8 +9,17 @@ import { Router } from '@angular/router';
   templateUrl: './notifications.component.html',
   styleUrls: ['./notifications.component.css']
 })
+
+
+
 export class NotificationsComponent implements OnInit {
   user:User;
+  sortbyDate(first: Order, second: Order) {
+    if (first.date > second.date) return -1;
+    else if (first.date == second.date) return 0;
+    else return 1;
+  }
+
   constructor(private orderService:OrderService,private router:Router) { }
   notifications: Order[];
   ngOnInit(): void {
@@ -20,7 +29,7 @@ export class NotificationsComponent implements OnInit {
       return;
     }
     this.orderService.notifications(this.user._id).subscribe((orders:Order[])=>{
-      this.notifications=orders;
+      this.notifications=orders.sort(this.sortbyDate);
     })
   
   }

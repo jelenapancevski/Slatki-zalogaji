@@ -36,7 +36,7 @@ pages:number[]=[];
     let last = first+this.itemsperpage;
     this.currentcakes=[];
     for(let i=first;i<last;i++){
-      if(i>this.cakes.length)break;
+      if(i>=this.cakes.length)break;
       this.currentcakes.push(this.cakes[i]);
     }
   }

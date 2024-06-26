@@ -10,6 +10,12 @@ function emailFormat(): ValidatorFn {
     return letter ?  null:{'email': {value: "Nekorektan email format"}} ;
   };
 }
+function numberFormat(): ValidatorFn{
+  return (control:AbstractControl): ValidationErrors| null => {
+    const isnumber = /^[1-9]+[0-9]*$/.test(control.value)
+    return isnumber ? null: {"number":{value:"Nekorektan format broja ulice"}} 
+  }
+}
 @Component({
   selector: 'app-updatedata',
   templateUrl: './updatedata.component.html',
@@ -43,7 +49,7 @@ export class UpdatedataComponent implements OnInit {
       lastname: new FormControl(this.user.lastname, Validators.required),
       username: new FormControl(this.user.username, [Validators.required, this.usernameTaken(this.user._id)]),
       street: new FormControl(this.user.address.street, [Validators.required]),
-      number: new FormControl(this.user.address.number, [Validators.required, Validators.pattern("^[1-9]+[0-9]*$")]),
+      number: new FormControl(this.user.address.number, [Validators.required, numberFormat()]),
       city: new FormControl(this.user.address.city, [Validators.required, ]),
       phone: new FormControl(this.user.phone, [Validators.required,Validators.pattern("^06[0-9]{7,8}$")]),
       email: new FormControl(this.user.email, [Validators.required, Validators.email, emailFormat(), this.emailTaken(this.user._id)]),

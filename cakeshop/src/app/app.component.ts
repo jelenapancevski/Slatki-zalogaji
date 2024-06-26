@@ -18,6 +18,7 @@ export class AppComponent {
   
   logout(){
     sessionStorage.removeItem("user");
+    sessionStorage.removeItem("order");
       document.location.replace('/login');
   }
   selectOption(option: string) {

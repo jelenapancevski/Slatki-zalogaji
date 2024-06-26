@@ -34,6 +34,7 @@ export class HomepageComponent implements OnInit {
   }
   logout(){
     sessionStorage.removeItem("user");
-      document.location.replace('/login');
+    sessionStorage.removeItem("order");
+    document.location.replace('/login');
   }
 }

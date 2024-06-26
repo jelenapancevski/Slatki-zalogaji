@@ -16,7 +16,7 @@ export class AddproductComponent implements OnInit {
   image: File;
   first:boolean = true;
   product: Product;
-
+  errormessage:String = null
   index : number;
   message :String;
 
@@ -41,11 +41,34 @@ export class AddproductComponent implements OnInit {
   this.newingridient = null;  
   }
   addproduct(){
+    if(this.product.name == null || this.product.name == ""){
+      this.message = "Potrebno je uneti naziv proizvoda."
+      return
+    } 
     if((this.product.description==null) || (this.product.description=="")){
       this.message = "Potrebno je uneti opis proizvoda."
       return
     }
+    if (this.product.price == null){
+      this.message = "Potrebno je uneti cenu proizvoda."
+      return
+    }
    
+    if (this.product.type == null){
+      this.message = "Potrebno je odabrati tip proizoda."
+      return
+    }
+
+    if (this.product.ingridients.length == 0){
+      this.message = "Potrebno je uneti bar jedan sastojak."
+      return
+    }
+
+    if (this.image == null){
+      this.message = "Potrebno je odabrati sliku proizovda."
+      return
+    }
+
    this.product.comments = [];
    
     let extension = this.image.type;
@@ -63,9 +86,7 @@ export class AddproductComponent implements OnInit {
     document.location.reload();
 
   });
-
-  
-  
+    
 }
 
 }

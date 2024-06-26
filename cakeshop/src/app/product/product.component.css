@@ -155,6 +155,7 @@
 
 .comment {
     margin:1%;
+    width: 90%;
 }
 .comment mat-card-content {
     margin: 0;

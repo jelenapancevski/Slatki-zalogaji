@@ -13,13 +13,13 @@
             <div class="offset-lg-4 col-lg-2 offset-sm-2 col-sm-4  " >
                 <mat-form-field appearance="outline" layout="column">
                     <mat-label>Ime</mat-label>
-                    <input type="text" matInput placeholder="Firstname" formControlName="firstname" [(ngModel)]="user.firstname" >
+                    <input type="text" matInput placeholder="Ime" formControlName="firstname" [(ngModel)]="user.firstname" >
                 </mat-form-field>
             </div>
             <div class="col-lg-2 col-sm-4">
                 <mat-form-field appearance="outline">
                     <mat-label>Prezime</mat-label>
-                    <input type="text" matInput placeholder="Lastname" formControlName="lastname" [(ngModel)]="user.lastname">
+                    <input type="text" matInput placeholder="Prezime" formControlName="lastname" [(ngModel)]="user.lastname">
                 </mat-form-field>
             </div>
         </div>
@@ -29,7 +29,7 @@
             <div class=" offset-lg-4 col-lg-2 offset-sm-2 col-sm-4 ">
                 <mat-form-field appearance="outline">
                     <mat-label>Korisničko ime</mat-label>
-                    <input type="text" matInput placeholder="Username" formControlName="username" [(ngModel)]="user.username">
+                    <input type="text" matInput placeholder="Korisničko ime" formControlName="username" [(ngModel)]="user.username">
                     
                 </mat-form-field>
                 <p *ngIf="EditPersonalData.get('username').errors?.['username']" class="mat-error">

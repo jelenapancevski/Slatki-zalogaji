@@ -65,7 +65,6 @@ class UserController {
         };
         // edit personal info
         this.edit = (req, res) => {
-            console.log(req.body.user._id);
             user_1.default.collection.updateOne({ "_id": new mongodb_1.ObjectId(req.body.user._id) }, { $set: {
                     'username': req.body.user.username,
                     'password': req.body.user.password,

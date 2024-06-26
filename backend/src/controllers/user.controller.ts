@@ -64,7 +64,6 @@ export class UserController{
     }
     // edit personal info
     edit= (req:express.Request,res:express.Response)=>{
-        console.log(req.body.user._id)
         User.collection.updateOne({"_id":new ObjectId(req.body.user._id)},{$set:{
             'username':req.body.user.username,
             'password':req.body.user.password,
